@@ -42,7 +42,7 @@ pipeline {
                 echo "This is deploying the code"
                 // Uncomment the following line if you want to run the container
                 // sh "docker run -d -p 8000:8000 django-todo-cicd:latest"
-                sh "docker compose up -d"
+                sh "docker compose down && docker compose up -d"
             }
         }
     }
